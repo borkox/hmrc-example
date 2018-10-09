@@ -1,0 +1,50 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="addQuotationRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="quotation" type="tns:Quotation"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addQuotationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="added" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getQuotationsRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getQuotationsResponse">
+        <xs:simpleType>
+            <xs:list itemType="tns:Quotation" />
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:complexType name="Quotation">
+        <xs:sequence>
+            <xs:element name="reference" type="xs:string"/>
+            <xs:element name="details" type="xs:string"/>
+            <xs:element name="cost" type="xs:float"/>
+            <xs:element name="currency" type="tns:currency"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="currency">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GBP"/>
+            <xs:enumeration value="EUR"/>
+            <xs:enumeration value="USD"/>
+            <xs:enumeration value="BGN"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
