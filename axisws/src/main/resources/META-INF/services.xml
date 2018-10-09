@@ -1,0 +1,14 @@
+<service name="QuoteBean" scope="application" >
+
+    <Description> Quoting service description. </Description>
+
+    <!--<transports>-->
+        <!--<transport>HTTP</transport>-->
+    <!--</transports>-->
+
+    <!--<schema schemaNamespace="schema namespace"/>-->
+
+    <parameter name="ServiceClass" locked="xsd:false">com.example.ws.QuoteBean</parameter>
+
+
+</service>
