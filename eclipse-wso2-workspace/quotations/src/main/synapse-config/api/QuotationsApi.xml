@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/quotations" name="QuotationsAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/*">
+        <inSequence>
+            <log description="Request Log" level="full">
+                <property name="message" value="&quot;Welcome to QuotationsAPI&quot;"/>
+            </log>
+            <send>
+                <endpoint>
+                    <address format="rest" uri="http://localhost:8080/quotations"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

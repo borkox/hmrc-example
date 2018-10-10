@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="SpringBootQuotationsRestEP" xmlns="http://ws.apache.org/ns/synapse">
+    <http statistics="enable" trace="enable" uri-template="http://localhost:8080/quotations">
+        <timeout>
+            <responseAction>fault</responseAction>
+        </timeout>
+    </http>
+</endpoint>

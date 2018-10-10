@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="QuotationsApi" groupId="com.example.quotations.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/QuotationsApi.xml</file>
+    </artifact>
+    <artifact name="SpringBootQuotationsRestEP" groupId="com.example.quotations.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/SpringBootQuotationsRestEP.xml</file>
+    </artifact>
+    <artifact name="SpringBootQuotationsRestEP1" groupId="com.example.quotations.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/SpringBootQuotationsRestEP1.xml</file>
+    </artifact>
+</artifacts>

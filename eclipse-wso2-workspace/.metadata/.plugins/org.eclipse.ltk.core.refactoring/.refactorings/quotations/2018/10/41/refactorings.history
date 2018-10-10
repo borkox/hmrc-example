@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;quotations&apos;&#x0D;&#x0A;- Original project: &apos;quotations&apos;&#x0D;&#x0A;- Original element: &apos;QueryDoctorEP.xml&apos;" description="Delete element" element1="src/main/synapse-config/endpoints/QueryDoctorEP.xml" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1539202221213" subPackages="false" version="1.0"/>
+</session>

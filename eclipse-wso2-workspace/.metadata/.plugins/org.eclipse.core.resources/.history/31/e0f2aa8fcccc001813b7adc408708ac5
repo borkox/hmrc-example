@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/quotations" name="QuotationsAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/all">
+        <inSequence>
+            <log description="Request Log" level="custom">
+                <property name="message" value="&quot;Welcome to QuotationsAPI&quot;"/>
+            </log>
+            <send>
+                <endpoint key="SpringBootQuotationsRestEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/add">
+        <inSequence>
+            <send>
+                <endpoint key="SpringBootQuotationsRestEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>
