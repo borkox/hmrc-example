@@ -54,4 +54,14 @@ public class Quotation {
 
         return Objects.hash(reference);
     }
+
+    @Override
+    public String toString() {
+        return "Quotation{" +
+                "reference='" + reference + '\'' +
+                ", details='" + details + '\'' +
+                ", cost=" + cost +
+                ", currency='" + currency + '\'' +
+                '}';
+    }
 }

@@ -1,10 +1,7 @@
 package com.example.rest;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class QuotationHolder {
-    public static Set<Quotation> quotations = new HashSet<>();
+    static Set<Quotation> quotations = Collections.synchronizedSet(new HashSet<>());
 }
