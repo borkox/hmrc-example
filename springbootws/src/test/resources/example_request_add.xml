@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://spring.io/guides/gs-producing-web-service">
-    <SOAP-ENV:Header/>
-    <SOAP-ENV:Body>
-        <ns2:addQuotationRequest>
-            <ns2:quotation>
-                <ns2:reference>Spain</ns2:reference>
-                <ns2:currency>EUR</ns2:currency>
-                <ns2:cost>1500.0</ns2:cost>
-            </ns2:quotation>
-        </ns2:addQuotationRequest>
-    </SOAP-ENV:Body>
+<SOAP-ENV:Header/>
+<SOAP-ENV:Body>
+    <ns2:addQuotationRequest>
+        <ns2:quotation>
+            <ns2:reference>Spain</ns2:reference>
+            <ns2:currency>EUR</ns2:currency>
+            <ns2:cost>1500.0</ns2:cost>
+        </ns2:quotation>
+    </ns2:addQuotationRequest>
+</SOAP-ENV:Body>
 </SOAP-ENV:Envelope>

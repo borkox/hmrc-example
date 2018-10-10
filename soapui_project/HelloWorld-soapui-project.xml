@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8ba17b57-d5cd-4795-8812-5bca4fbf220b" activeEnvironment="Default" name="HelloWorld" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="003a4c03-5874-448f-8dd0-1f6b143f8ca7" wsaVersion="NONE" name="HelloServiceSoap12Binding" type="wsdl" bindingName="{http://www.wso2.org/types}HelloServiceSoap12Binding" soapVersion="1_2" anonymous="optional" definition="file:/D:/work/wso2/bobi/admin--HelloWorldAPI1.0.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/D:/work/wso2/bobi/admin--HelloWorldAPI1.0.wsdl"><con:part><con:url>file:/D:/work/wso2/bobi/admin--HelloWorldAPI1.0.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.wso2.org/types" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://www.wso2.org/types" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>HelloService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://www.wso2.org/types">
+      <xs:element name="greet">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="greetResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="greetRequest">
+    <wsdl:part name="parameters" element="ns:greet"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="greetResponse">
+    <wsdl:part name="parameters" element="ns:greetResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="HelloServicePortType">
+    <wsdl:operation name="greet">
+      <wsdl:input message="ns:greetRequest" wsaw:Action="urn:greet"></wsdl:input>
+      <wsdl:output message="ns:greetResponse" wsaw:Action="urn:greetResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloServiceHttpBinding" type="ns:HelloServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="greet">
+      <http:operation location="greet"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HelloServiceSoap11Binding" type="ns:HelloServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="greet">
+      <soap:operation soapAction="urn:greet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HelloServiceSoap12Binding" type="ns:HelloServicePortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="greet">
+      <soap12:operation soapAction="urn:greet" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloService">
+    <wsdl:port name="HelloServiceHttpEndpoint" binding="ns:HelloServiceHttpBinding">
+      <http:address location="http://10.0.1.4:8281/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpSoap12Endpoint" binding="ns:HelloServiceSoap12Binding">
+      <soap12:address location="http://10.0.1.4:8281/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpsSoap11Endpoint" binding="ns:HelloServiceSoap11Binding">
+      <soap:address location="https://10.0.1.4:8244/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpsEndpoint" binding="ns:HelloServiceHttpBinding">
+      <http:address location="https://10.0.1.4:8244/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpsSoap12Endpoint" binding="ns:HelloServiceSoap12Binding">
+      <soap12:address location="https://10.0.1.4:8244/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpSoap11Endpoint" binding="ns:HelloServiceSoap11Binding">
+      <soap:address location="http://10.0.1.4:8281/hello/1.0"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.0.1.4:8281/hello/1.0</con:endpoint><con:endpoint>https://10.0.1.4:8244/hello/1.0</con:endpoint></con:endpoints><con:operation id="6d2b575c-8257-41b6-aa9a-c4a9eadcf679" isOneWay="false" action="urn:greet" name="greet" bindingOperationName="greet" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="28f6c2fb-2c1b-4b65-bffb-f3cfe0173310" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.1.4:8281/hello/1.0</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://www.wso2.org/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:greet>\r
+         <!--Optional:-->\r
+         <name>?</name>\r
+      </typ:greet>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:greet"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="2e3a4378-1e0c-4799-a935-e6cb510c2024" wsaVersion="NONE" name="HelloServiceSoap11Binding" type="wsdl" bindingName="{http://www.wso2.org/types}HelloServiceSoap11Binding" soapVersion="1_1" anonymous="optional" definition="file:/D:/work/wso2/bobi/admin--HelloWorldAPI1.0.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\D:\work\wso2\bobi\admin--HelloWorldAPI1.0.wsdl"><con:part><con:url>file:\D:\work\wso2\bobi\admin--HelloWorldAPI1.0.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.wso2.org/types" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://www.wso2.org/types" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>HelloService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://www.wso2.org/types">
+      <xs:element name="greet">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="greetResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="greetRequest">
+    <wsdl:part name="parameters" element="ns:greet"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="greetResponse">
+    <wsdl:part name="parameters" element="ns:greetResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="HelloServicePortType">
+    <wsdl:operation name="greet">
+      <wsdl:input message="ns:greetRequest" wsaw:Action="urn:greet"></wsdl:input>
+      <wsdl:output message="ns:greetResponse" wsaw:Action="urn:greetResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloServiceHttpBinding" type="ns:HelloServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="greet">
+      <http:operation location="greet"/>
+      <wsdl:input>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="text/xml"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HelloServiceSoap11Binding" type="ns:HelloServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="greet">
+      <soap:operation soapAction="urn:greet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HelloServiceSoap12Binding" type="ns:HelloServicePortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="greet">
+      <soap12:operation soapAction="urn:greet" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloService">
+    <wsdl:port name="HelloServiceHttpEndpoint" binding="ns:HelloServiceHttpBinding">
+      <http:address location="http://10.0.1.4:8281/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpSoap12Endpoint" binding="ns:HelloServiceSoap12Binding">
+      <soap12:address location="http://10.0.1.4:8281/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpsSoap11Endpoint" binding="ns:HelloServiceSoap11Binding">
+      <soap:address location="https://10.0.1.4:8244/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpsEndpoint" binding="ns:HelloServiceHttpBinding">
+      <http:address location="https://10.0.1.4:8244/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpsSoap12Endpoint" binding="ns:HelloServiceSoap12Binding">
+      <soap12:address location="https://10.0.1.4:8244/hello/1.0"/>
+    </wsdl:port>
+    <wsdl:port name="HelloServiceHttpSoap11Endpoint" binding="ns:HelloServiceSoap11Binding">
+      <soap:address location="http://10.0.1.4:8281/hello/1.0"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.0.1.4:8281/hello/1.0</con:endpoint><con:endpoint>https://10.0.1.4:8244/hello/1.0</con:endpoint></con:endpoints><con:operation id="46a02306-631c-49f2-99fc-d11bb10ad41a" isOneWay="false" action="urn:greet" name="greet" bindingOperationName="greet" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="96b2a111-8bc5-48c4-8246-b9d3d6918ae4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.1.4:8281/hello/1.0</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://www.wso2.org/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:greet>\r
+         <!--Optional:-->\r
+         <name>?</name>\r
+      </typ:greet>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:greet"/></con:call></con:operation></con:interface><con:testSuite id="4fcd72f5-c752-4b55-ba38-af48d7b1513c" name="testSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="f1d51848-3af9-43ef-b331-4bcd66af9b42" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="greet TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="bcce1016-eab9-4bfe-87d5-ae05e6ffccf6" name="greet"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloServiceSoap12Binding</con:interface><con:operation>greet</con:operation><con:request name="greet" id="8fdae68c-a171-4b74-8497-cd7bf738a7f5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:9443/services/HelloService</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://www.wso2.org/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:greet>\r
+         <!--Optional:-->\r
+         <name>Bobi</name>\r
+      </typ:greet>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="Simple Contains" id="18393907-116c-4d65-aa3c-e4b558699e55" name="Contains"><con:configuration><token>Hello World, Bobi !!!</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:greet" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="missing name" id="b7aedd82-8f69-4f0d-836f-21702b441e87"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloServiceSoap11Binding</con:interface><con:operation>greet</con:operation><con:request name="missing name" id="b3a8f0a9-b72f-4ff5-88a7-a64fac02ca07"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.1.4:8281/hello/1.0</con:endpoint><con:request>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://www.wso2.org/types">\r
+   &lt;soapenv:Header/>\r
+   &lt;soapenv:Body>\r
+
+   &lt;/soapenv:Body>\r
+&lt;/soapenv:Envelope></con:request><con:assertion type="SOAP Response" id="592e49a7-6411-439b-b977-498a939b0efc"/><con:assertion type="Not SOAP Fault Assertion" id="e6c9df02-8d0c-4499-b33d-0d2398049e9f" name="SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

@@ -2,11 +2,10 @@
 
     <Description> Store your quotations which you give to your clients. </Description>
 
-    <!--<transports>-->
-        <!--<transport>HTTP</transport>-->
-    <!--</transports>-->
-
-    <!--<schema schemaNamespace="schema namespace"/>-->
+    <messageReceivers>
+        <messageReceiver mep="http://www.w3.org/ns/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+        <messageReceiver  mep="http://www.w3.org/ns/wsdl/in-out"  class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </messageReceivers>
 
     <parameter name="ServiceClass" locked="xsd:false">com.example.ws.QuotationService</parameter>
 

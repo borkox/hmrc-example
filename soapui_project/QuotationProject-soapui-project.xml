@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e6d7ce2d-22aa-4ec6-abfd-a14a2952c027" activeEnvironment="Default" name="QuotationProject" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="QuotationServiceSoap12Binding TestSuite"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="a1365ebf-383a-48b1-b56d-0b76b4eacfee" wsaVersion="NONE" name="QuotationServiceSoap12Binding" type="wsdl" bindingName="{http://ws.example.com}QuotationServiceSoap12Binding" soapVersion="1_2" anonymous="optional" definition="http://localhost:8080/axis2/services/QuotationService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="b0eb3e62-5dd1-4099-b855-270ea8b99040" isOneWay="false" action="urn:addQuotation" name="addQuotation" bindingOperationName="addQuotation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b3047786-eeda-4729-b193-4173b747bbe1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="http://ws.example.com" xmlns:xsd="http://models.ws.example.com/xsd">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:addQuotation>\r
+         <!--Optional:-->\r
+         <ws:quotation>\r
+            <!--Optional:-->\r
+            <xsd:cost>?</xsd:cost>\r
+            <!--Optional:-->\r
+            <xsd:currency>?</xsd:currency>\r
+            <!--Optional:-->\r
+            <xsd:details>?</xsd:details>\r
+            <!--Optional:-->\r
+            <xsd:reference>?</xsd:reference>\r
+         </ws:quotation>\r
+      </ws:addQuotation>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addQuotation"/></con:call></con:operation><con:operation id="ef94e068-aed8-4370-83a9-3c99424da505" isOneWay="false" action="urn:getAllQuotations" name="getAllQuotations" bindingOperationName="getAllQuotations" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cef76dc1-78ee-4290-b5fb-fc4f3c17cb1d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="http://ws.example.com">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:getAllQuotations/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAllQuotations"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="fc8fd620-754e-4256-8b77-31491f74d787" wsaVersion="NONE" name="QuotationServiceSoap11Binding" type="wsdl" bindingName="{http://ws.example.com}QuotationServiceSoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/axis2/services/QuotationService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/axis2/services/QuotationService?wsdl"><con:part><con:url>http://localhost:8080/axis2/services/QuotationService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ws.example.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://ws.example.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax21="http://models.ws.example.com/xsd" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl">
+  <wsdl:documentation>Store your quotations which you give to your clients.</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.example.com" xmlns:ax22="http://models.ws.example.com/xsd">
+      <xs:import namespace="http://models.ws.example.com/xsd"/>
+      <xs:element name="getAllQuotations">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllQuotationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax22:Quotation"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuotationServiceException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="QuotationServiceException" nillable="true" type="ns:Exception"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="addQuotation">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="quotation" nillable="true" type="ax22:Quotation"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addQuotationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://models.ws.example.com/xsd">
+      <xs:complexType name="Quotation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cost" type="xs:float"/>
+          <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="details" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="reference" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addQuotationRequest">
+    <wsdl:part name="parameters" element="ns:addQuotation"/>
+  </wsdl:message>
+  <wsdl:message name="addQuotationResponse">
+    <wsdl:part name="parameters" element="ns:addQuotationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="QuotationServiceException">
+    <wsdl:part name="parameters" element="ns:QuotationServiceException"/>
+  </wsdl:message>
+  <wsdl:message name="getAllQuotationsRequest">
+    <wsdl:part name="parameters" element="ns:getAllQuotations"/>
+  </wsdl:message>
+  <wsdl:message name="getAllQuotationsResponse">
+    <wsdl:part name="parameters" element="ns:getAllQuotationsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="QuotationServicePortType">
+    <wsdl:operation name="addQuotation">
+      <wsdl:input message="ns:addQuotationRequest" wsaw:Action="urn:addQuotation"/>
+      <wsdl:output message="ns:addQuotationResponse" wsaw:Action="urn:addQuotationResponse"/>
+      <wsdl:fault message="ns:QuotationServiceException" name="QuotationServiceException" wsaw:Action="urn:addQuotationQuotationServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAllQuotations">
+      <wsdl:input message="ns:getAllQuotationsRequest" wsaw:Action="urn:getAllQuotations"/>
+      <wsdl:output message="ns:getAllQuotationsResponse" wsaw:Action="urn:getAllQuotationsResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QuotationServiceSoap11Binding" type="ns:QuotationServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="addQuotation">
+      <soap:operation soapAction="urn:addQuotation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="QuotationServiceException">
+        <soap:fault use="literal" name="QuotationServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllQuotations">
+      <soap:operation soapAction="urn:getAllQuotations" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QuotationServiceSoap12Binding" type="ns:QuotationServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="addQuotation">
+      <soap12:operation soapAction="urn:addQuotation" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="QuotationServiceException">
+        <soap12:fault use="literal" name="QuotationServiceException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllQuotations">
+      <soap12:operation soapAction="urn:getAllQuotations" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QuotationServiceHttpBinding" type="ns:QuotationServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="addQuotation">
+      <http:operation location="addQuotation"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+      <wsdl:fault name="QuotationServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getAllQuotations">
+      <http:operation location="getAllQuotations"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuotationService">
+    <wsdl:port name="QuotationServiceHttpSoap11Endpoint" binding="ns:QuotationServiceSoap11Binding">
+      <soap:address location="http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap11Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="QuotationServiceHttpSoap12Endpoint" binding="ns:QuotationServiceSoap12Binding">
+      <soap12:address location="http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap12Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="QuotationServiceHttpEndpoint" binding="ns:QuotationServiceHttpBinding">
+      <http:address location="http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpEndpoint/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap11Endpoint/</con:endpoint></con:endpoints><con:operation id="789079ae-ca28-4b00-9648-b495609250ac" isOneWay="false" action="urn:addQuotation" name="addQuotation" bindingOperationName="addQuotation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cff48498-a68c-4656-ad9a-64a924e5cc6d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.example.com" xmlns:xsd="http://models.ws.example.com/xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:addQuotation>\r
+         <!--Optional:-->\r
+         <ws:quotation>\r
+            <!--Optional:-->\r
+            <xsd:cost>?</xsd:cost>\r
+            <!--Optional:-->\r
+            <xsd:currency>?</xsd:currency>\r
+            <!--Optional:-->\r
+            <xsd:details>?</xsd:details>\r
+            <!--Optional:-->\r
+            <xsd:reference>?</xsd:reference>\r
+         </ws:quotation>\r
+      </ws:addQuotation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addQuotation"/></con:call></con:operation><con:operation id="15591c53-f983-40a4-883e-c0e0cfcc1e14" isOneWay="false" action="urn:getAllQuotations" name="getAllQuotations" bindingOperationName="getAllQuotations" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6cdea218-f269-4f90-a5b9-9df65993dd84" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.example.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:getAllQuotations/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getAllQuotations"/></con:call></con:operation></con:interface><con:testSuite id="c77e8c28-76e4-4154-9aa1-44868f1ced18" name="QuotationServiceSoap11Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="28afcf42-bf6d-4930-be74-a94c3bd72cf0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="addQuotation TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="362459f6-84ad-4237-a173-59bb3dae85e4" name="addQuotation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QuotationServiceSoap11Binding</con:interface><con:operation>addQuotation</con:operation><con:request name="addQuotation" id="e282cbd9-8fca-4c35-9d86-542600bddeb8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://ws.example.com">
+<SOAP-ENV:Header/>
+<SOAP-ENV:Body>
+    <ns2:addQuotationRequest>
+        <ns2:quotation>
+            <ns2:reference>Spain</ns2:reference>
+            <ns2:currency>EUR</ns2:currency>
+            <ns2:cost>1500.0</ns2:cost>
+        </ns2:quotation>
+    </ns2:addQuotationRequest>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:addQuotation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="80b292a5-5cbe-4ed8-b2b0-9eaa4ff182b2" name="addExisting"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QuotationServiceSoap11Binding</con:interface><con:operation>addQuotation</con:operation><con:request name="addExisting" id="e282cbd9-8fca-4c35-9d86-542600bddeb8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://ws.example.com">
+<SOAP-ENV:Header/>
+<SOAP-ENV:Body>
+    <ns2:addQuotationRequest>
+        <ns2:quotation>
+            <ns2:reference>Spain</ns2:reference>
+            <ns2:currency>EUR</ns2:currency>
+            <ns2:cost>1500.0</ns2:cost>
+        </ns2:quotation>
+    </ns2:addQuotationRequest>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]></con:request><con:assertion type="Simple Contains" id="e3ffea76-6a21-4223-a9b4-4cd428237903" name="Contains"><con:configuration><token>Quotation Spain exists</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:addQuotation" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ef851665-c980-4552-8aec-b3696a97d080" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getAllQuotations TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="7c94c9a2-cf62-4e05-9ea7-01464102ab3e" name="getAllQuotations"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QuotationServiceSoap11Binding</con:interface><con:operation>getAllQuotations</con:operation><con:request name="getAllQuotations" id="a879f75e-16db-4dcc-baf2-e2ef51376f1c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/QuotationService.QuotationServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.example.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:getAllQuotations/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="02c0f16c-136c-402c-957d-3b043c4dfb0f" name="Contains"><con:configuration><token>Spain</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:getAllQuotations" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
