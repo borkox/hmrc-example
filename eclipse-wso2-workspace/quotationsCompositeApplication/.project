@@ -3,10 +3,19 @@
 	<name>quotationsCompositeApplication</name>
 	<comment></comment>
 	<projects>
+		<project>quotations</project>
+		<project>QuotationsRegistry</project>
+		<project>RemoteSystemsTempFiles</project>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.wst.common.project.facet.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.wso2.developerstudio.eclipse.distribution.project.nature</nature>
+		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 	</natures>
 </projectDescription>

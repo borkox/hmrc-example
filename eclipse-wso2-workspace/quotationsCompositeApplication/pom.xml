@@ -9,7 +9,10 @@
   <name>quotationsCompositeApplication</name>
   <description>quotationsCompositeApplication</description>
   <properties>
+    <com.example.QuotationsRegistry.resource_._TransformRequest>capp/EnterpriseServiceBus</com.example.QuotationsRegistry.resource_._TransformRequest>
+    <com.example.QuotationsRegistry.resource_._TransformResponse>capp/EnterpriseServiceBus</com.example.QuotationsRegistry.resource_._TransformResponse>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
+    <com.example.quotations.proxy-service_._QuotationsTransofmProxy>capp/EnterpriseServiceBus</com.example.quotations.proxy-service_._QuotationsTransofmProxy>
     <com.example.quotations.api_._QuotationsApi>capp/EnterpriseServiceBus</com.example.quotations.api_._QuotationsApi>
   </properties>
   <dependencies>
@@ -18,6 +21,24 @@
       <artifactId>QuotationsApi</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.QuotationsRegistry.resource</groupId>
+      <artifactId>TransformResponse</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.quotations.proxy-service</groupId>
+      <artifactId>QuotationsTransofmProxy</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.QuotationsRegistry.resource</groupId>
+      <artifactId>TransformRequest</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
     </dependency>
   </dependencies>
   <repositories>

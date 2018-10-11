@@ -278,3 +278,23 @@
 2018-10-11 00:56:39,929 [Worker-1] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@180eed72{/servlet,null,AVAILABLE}
 2018-10-11 00:56:39,977 [Worker-1] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@399e0d{HTTP/1.1,[http/1.1]}{0.0.0.0:7774}
 2018-10-11 00:56:39,978 [Worker-1] INFO  org.eclipse.jetty.server.Server - Started @31082ms
+2018-10-11 09:41:30,952 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-10-11 09:41:42,294 [Worker-10] INFO  org.eclipse.jetty.util.log - Logging initialized @36718ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-10-11 09:41:42,551 [Worker-10] INFO  org.eclipse.jetty.server.Server - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T23:27:37+02:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2018-10-11 09:41:42,618 [Worker-10] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+2018-10-11 09:41:42,619 [Worker-10] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+2018-10-11 09:41:42,622 [Worker-10] INFO  org.eclipse.jetty.server.session - Scavenging every 660000ms
+2018-10-11 09:41:42,647 [Worker-10] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4e02f5c3{/welcome,file:///D:/work/wso2/bobi/eclipse/configuration/org.eclipse.osgi/1178/0/.cp/TemplateDash/,AVAILABLE}
+2018-10-11 09:41:42,649 [Worker-10] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@78b9c237{/servlet,null,AVAILABLE}
+2018-10-11 09:41:42,787 [Worker-10] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@5ca2ad7f{HTTP/1.1,[http/1.1]}{0.0.0.0:7774}
+2018-10-11 09:41:42,787 [Worker-10] INFO  org.eclipse.jetty.server.Server - Started @37212ms
+2018-10-11 14:06:33,274 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-10-11 14:06:38,447 [Worker-6] INFO  org.eclipse.jetty.util.log - Logging initialized @29586ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-10-11 14:06:38,634 [Worker-6] INFO  org.eclipse.jetty.server.Server - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T23:27:37+02:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2018-10-11 14:06:38,691 [Worker-6] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+2018-10-11 14:06:38,692 [Worker-6] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+2018-10-11 14:06:38,695 [Worker-6] INFO  org.eclipse.jetty.server.session - Scavenging every 660000ms
+2018-10-11 14:06:38,715 [Worker-6] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2f047f8b{/welcome,file:///D:/work/wso2/bobi/eclipse/configuration/org.eclipse.osgi/1178/0/.cp/TemplateDash/,AVAILABLE}
+2018-10-11 14:06:38,716 [Worker-6] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4489a1a0{/servlet,null,AVAILABLE}
+2018-10-11 14:06:38,773 [Worker-6] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@3a4bfb41{HTTP/1.1,[http/1.1]}{0.0.0.0:7774}
+2018-10-11 14:06:38,774 [Worker-6] INFO  org.eclipse.jetty.server.Server - Started @29913ms

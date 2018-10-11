@@ -2,4 +2,7 @@
     <artifact name="QuotationsApi" groupId="com.example.quotations.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/QuotationsApi.xml</file>
     </artifact>
+    <artifact name="QuotationsTransofmProxy" groupId="com.example.quotations.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/QuotationsTransofmProxy.xml</file>
+    </artifact>
 </artifacts>

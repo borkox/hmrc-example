@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="QuotationsTransofmProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_1dc74f45-ab20-4b97-b0f1-b484d821b422">
+            <address format="get" statistics="enable" trace="enable" uri="http://localhost:8080/quotations/all"/>
+        </endpoint>
+        <inSequence>
+            <xslt key="conf:myresources/TransformRequest.xslt"/>
+        </inSequence>
+        <outSequence>
+            <xslt key="conf:myresources/TransformResponse.xslt"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>
